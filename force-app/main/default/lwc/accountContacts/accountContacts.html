@@ -1,0 +1,25 @@
+<template>
+    <template if:true={loading}>
+        <lightning-spinner alternative-text="Loading" size="small"></lightning-spinner>
+    </template>
+    <template if:false={loading}>
+        <template if:true={account}>
+            Contacts of {account.Name}:
+        </template>
+        <template if:true={contacts}>
+            <template if:true={haveContacts}>
+                <ul>
+                    <template for:each={contacts} for:item="contact">
+                        <li key={contact.Id} class="slds-list_dotted">
+                            {contact.Name}
+                        </li>
+                    </template>
+                </ul>    
+            </template>
+            <template if:false={haveContacts}>
+                No contacts to display
+            </template>
+        </template>
+    </template>
+
+</template>

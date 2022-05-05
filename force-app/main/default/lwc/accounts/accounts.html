@@ -1,0 +1,23 @@
+<template>
+    <template if:true={accounts.data}>
+        <template if:true={haveAccounts}>
+            Accounts list:
+            <ul class="slds-list_dotted">
+                <template for:each={accounts.data} for:item="acc">
+                    <li key={acc.Id}>
+                        <c-account-item account={acc}></c-account-item>
+                    </li>
+                </template>
+            </ul>
+        </template>
+        <template if:false={haveAccounts}>
+            No accounts to display
+        </template>
+    </template>
+    <template if:true={accounts.error}>
+        Error:
+        {accounts.error.body}
+    </template>
+
+
+</template>
