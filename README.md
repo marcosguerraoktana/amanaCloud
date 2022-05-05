@@ -8,9 +8,9 @@ Not sure about the scope of the expected refactor, perhaps the idea was implemen
 
 - LWC 1 is `accounts` and LWC 2 is `accountContacts`, `accountItem` is an auxiliar LWC used on `accounts`
 - The apex class to provide data for both component is `AccountUtil` covered by the test class `AccountUtilTest` that generate data from `TestDataGenerator` class
-- Message channel `selectedAccount` was created to communicate the components because the requiraments are not clear if the component will relared or not.
+- Message channel `selectedAccount` was created to communicate the components because the requiraments are not clear if the component will related or not.
 
 ## Task 3: Rollup Trigger
 
-Trigger  `OpportunityTrigger` was created only for needed events 
-Apex class `OpportunityHelper` contain the main logic that is covered by the test class `OpportunityTriggerTest` that generate data from `TestDataGenerator` class
+- Trigger  `OpportunityTrigger` was created only for needed events 
+- Apex class `OpportunityHelper` contain the main logic that is covered by the test class `OpportunityTriggerTest` that generate data from `TestDataGenerator` class
